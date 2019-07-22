@@ -29,10 +29,26 @@ const fs =require('fs');
 //   2.
 
 
-fs.readFile('./hello.txt',(err,data)=>{
+// fs.readFile('./hello.txt',(err,data)=>{
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log(data.toString());
+//     }
+// })
+
+// let result1 = fs.readFileSync('./heaven.txt');
+// console.log(result1);
+
+
+// //删除文件
+// fs.unlinkSync('./heaven.txt');
+
+//删除文件夹
+fs.rmdir('./hello',(err,data)=>{
     if(err){
         console.log(err);
     }else{
-        console.log(data.toString());
+        console.log(data);
     }
 })
