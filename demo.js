@@ -68,4 +68,20 @@ const fs =require('fs');
 // })
 
 //将指定文件中的数据按照指定的字节长度截取并保存在原文件
-fs.truncateSync('./hello.txt',2);
+// fs.truncateSync('./hello.txt',2);
+
+
+// //判断指定路径下的文件（夹）是否存在
+// let re = fs.existsSync('./hello.txt');
+// console.log(re);
+
+//查看文件的信息
+// console.log(fs.statSync('./hello.txt'));
+// debugger
+// db.close();
+
+fs.rename('../01.txt','./new.txt',(err)=>{
+    if(err){
+        console.log(err);
+    }
+})
