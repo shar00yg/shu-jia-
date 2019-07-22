@@ -1,1 +1,1 @@
-hello node
+function(){console.log(1);}
