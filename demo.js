@@ -58,11 +58,14 @@ const fs =require('fs');
 //     fs.mkdirSync('./hello');
 
 
-//读一个文件夹
-fs.readdir('../git',(err,data)=>{
-    if(err){
-        console.log(err);
-    }else{
-        console.log(data);
-    }
-})
+//读一个文件夹下的所有文件 返回数组
+// fs.readdir('../git',(err,data)=>{
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log(data);
+//     }
+// })
+
+//将指定文件中的数据按照指定的字节长度截取并保存在原文件
+fs.truncateSync('./hello.txt',2);
