@@ -45,7 +45,21 @@ const fs =require('fs');
 // fs.unlinkSync('./heaven.txt');
 
 //删除文件夹
-fs.rmdir('./hello',(err,data)=>{
+// fs.rmdir('./hello',(err,data)=>{
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log(data);
+//     }
+// })
+
+
+// //建立文件夹
+//     fs.mkdirSync('./hello');
+
+
+//读一个文件夹
+fs.readdir('../git',(err,data)=>{
     if(err){
         console.log(err);
     }else{
