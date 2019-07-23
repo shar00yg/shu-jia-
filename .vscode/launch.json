@@ -8,6 +8,13 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "program": "${workspaceFolder}/http.js"
+        },
+        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
             "program": "${workspaceFolder}\\demo.js"
         }
     ]
