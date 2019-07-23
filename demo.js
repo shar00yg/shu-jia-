@@ -80,8 +80,15 @@ const fs =require('fs');
 // debugger
 // db.close();
 
-fs.rename('../01.txt','./new.txt',(err)=>{
-    if(err){
-        console.log(err);
-    }
-})
+//rename(旧路径，新路径，回调函数)
+    //把旧路径的文件移动到新路径并 改名
+
+// fs.rename('../01.txt','./new.txt',(err)=>{
+//     if(err){
+//         console.log(err);
+//     }
+// })
+
+// console.log(__dirname);
+// debugger
+// db.close();
