@@ -17,6 +17,38 @@ let server = http.createServer((request,response)=>{
                 response.end(data);
             }
         })
+    }else if(pathname==='/bg.png')
+    {
+        fs.readFile('.'+pathname,(err,data)=>{
+            if(err){
+                response.end('no such file');
+            }else{
+                response.setHeader('content-type','text/html;charset=utf-8')
+                response.end(data);
+            }
+        })
+    }
+    else if(pathname==='/1.css')
+    {
+        fs.readFile('.'+pathname,(err,data)=>{
+            if(err){
+                response.end('no such file');
+            }else{
+                response.setHeader('content-type','text/html;charset=utf-8')
+                response.end(data);
+            }
+        })
+    }
+    else if(pathname==='/1.js')
+    {
+        fs.readFile('.'+pathname,(err,data)=>{
+            if(err){
+                response.end('no such file');
+            }else{
+                response.setHeader('content-type','text/html;charset=utf-8')
+                response.end(data);
+            }
+        })
     }
     //console.log(pathname,query);
     //response.end();
