@@ -1,3 +1,37 @@
-<h1>
-    哈哈哈哈哈
-</h1>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel= "stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="box">
+        <h2>订餐系统</h2>
+        手机号：<input type="text" id="phone"><br>
+        美食：<input type="text" id="food"><br>
+        <input type="submit" value="点我订餐" id="btn"><br>
+        <a href="/all">查看所有的订单</a>
+
+    </div>
+    <script src="js/ajax.js"></script>
+    <script>
+        btn.onclick = function(){
+            ajax({
+                url:'/dingcan',
+                type:'get',
+                data:{
+                    phone:phone.value,
+                    food:food.value
+                },
+                sucess(msg){
+                    console.log(msg)
+                },
+                err(status){
+                    console.log(status)
+                }
+            });
+        }
+    </script>
+</body>
+</html>
