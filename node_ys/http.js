@@ -47,6 +47,7 @@ let server = http.createServer((request,response)=>{
             }else{
                 response.setHeader('content-type','text/html;charset=utf-8')
                 response.end(data);
+                console.log(data.toString());
             }
         })
     }
