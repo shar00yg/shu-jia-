@@ -8,12 +8,15 @@
 </head>
 <body>
     用户：<input type='text'/><br>
-    密码：<input type="password"/>
+    密码：<input type="password"/><br>
+    <input type="submit" id ="btn"/>
 </body>
+<script type="text/javascript" src="./ajax.js"></script>
 <script type="text/javascript">
 
-
-    ajax({
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        ajax({
         url:'http//www.baidu.com',
         method:'get',
         data:{
@@ -26,6 +29,8 @@
         error:function(status){
             console.log(status);
         }
-    })
+    });
+    }
+    
 </script>
 </html>
