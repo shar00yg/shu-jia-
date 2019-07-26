@@ -11,6 +11,46 @@
 </body>
 <script>
     
+    function ajax(json){
+        var method = json.method.toUpperCase()||'GET';//设置数据传输方式的默认值
+        var data = json.data||{};
+        var xhr =new XMLHttpRequest();
+        
+        switch(method){
+            case 'GET':
+                xhr.open(method,'https://www.baidu.com?user=shar',true);
+                xhr.send(null);
+                break;
+            case 'POST':
+                xhr.open('post','https://www.baidu.com',true);
+                xhr.setRequestHeader('content-type','appliction/x-www-form-urlencode');
+                xhr.send('user=shar');
+        }
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState===4){
+                if(xhr.status>=200&&xhr.status<=300||xhr.status===304){
+                    // console.log(xhr.responseText);
+                    json.success(xhr.responseText);
+                }else{
+                    json.error(xhr.status);
+                }
+            }
+        }
 
+    }
+    ajax({
+        url:'http//www.baidu.com',
+        method:'get',
+        data:{
+            name:'shar',
+            age:18
+        },
+        success:function(){
+
+        },
+        error:function(){
+
+        }
+    })
 </script>
 </html>
