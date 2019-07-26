@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     
@@ -7,12 +7,12 @@
 </head>
 <body>
     <div class="box">
-        <h2>所有订单</h2>
-        <ul>
-            <% for(let i = 0; i<phoneList.length;i++){ %>
-            <li>手机号<a href="'./all<%phoneList[i]%>'><%phoneList[i]%>" </li>
-            <%}%>
-        </ul>
+            <h2>所有订单</h2>
+            <ul>
+                <% for(let i = 0 ; i < arrList.length;i++){ %>
+                <li>手机号<%= arrList[i]  %> </li>
+                <% } %>
+            </ul>
     </div>
     
 </body>

@@ -11,6 +11,6 @@ exports.saveData = function(req,res)
 exports.showAll = function (req,res)
 {
     file.getAll((arrList)=>{
-        res.render();
+        res.render('all');
     });
 }

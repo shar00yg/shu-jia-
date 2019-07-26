@@ -15,9 +15,8 @@ exports.getAll = function (callback)
         let arrList = fileList.map((value)=>{
             return value.replace('.txt','')
         });
-        console.log(arrList);
         if(!err){
-            callback(fileList);
+            callback(arrList);
         }
     })
 }
