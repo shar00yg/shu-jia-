@@ -9,12 +9,13 @@ exports.saveData = function (phone,data,callback)
         }
     })
 }
-
-
-
 exports.getAll = function (callback)
 {
     fs.readdir('./data',(err,fileList)=>{
+        let arrList = fileList.map((value)=>{
+            return value.replace('.txt','')
+        });
+        console.log(arrList);
         if(!err){
             callback(fileList);
         }

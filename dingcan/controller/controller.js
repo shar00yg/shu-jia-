@@ -1,4 +1,5 @@
-exports.saveData = funciton(req,res)
+const file = require('../models/file.js');
+exports.saveData = function(req,res)
 {
     //获取手机号和食物
     let {phone,food} =req.query;
@@ -6,14 +7,10 @@ exports.saveData = funciton(req,res)
         res.send(msg);
     });
 }
-
-
-
-
 //显示所有的订单
-exports.showAll = funciton (req,res)
+exports.showAll = function (req,res)
 {
-    file.getAll((fileList)=>{
-        console.log(fileList);
+    file.getAll((arrList)=>{
+        res.render();
     });
 }
